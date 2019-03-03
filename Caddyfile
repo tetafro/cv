@@ -1,0 +1,7 @@
+{$ADDR}:{$PORT} {
+    root {$ROOT}
+    index index.html
+    tls {$TLS}
+    log stdout
+    errors stdout
+}
