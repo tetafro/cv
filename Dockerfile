@@ -1,9 +1,6 @@
-FROM tetafro/caddy:0.11.4
-
-WORKDIR /app
+FROM tetafro/caddy:1.0.3
 
 COPY Caddyfile /etc/
-COPY images images
-COPY index.html .
+COPY src /app
 
 CMD ["-agree", "-conf", "/etc/Caddyfile"]
