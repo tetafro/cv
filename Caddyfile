@@ -1,7 +1,7 @@
-{$ADDR}:{$PORT} {
-    root {$ROOT}
+:8080 {
+    root /app/
     index /index.html
-    tls {$TLS}
-    log stdout
+    tls off
+    log /app/logs/access.log
     errors stdout
 }
