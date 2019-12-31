@@ -1,4 +1,5 @@
 :8080 {
+    header /static/ Cache-Control "public, max-age=604800"
     root /app/
     index /index.html
     tls off
