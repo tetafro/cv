@@ -1,4 +1,4 @@
-# Access logs
+# Web server access logs
 /logs/
 
 # Ansible temporary files
