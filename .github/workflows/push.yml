@@ -6,7 +6,28 @@ on:
     tags-ignore: ['*']
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install linters
+        run: |
+          sudo apt install -y ansible ansible-lint yamllint
+
+      - name: Run yamllint
+        run: yamllint --format colored --strict ./deploy/*.yml
+
+      - name: Run ansible-lint
+        run: ansible-lint ./deploy/*.yml
+
   build:
+    needs: check
     runs-on: ubuntu-latest
     permissions:
       contents: read
