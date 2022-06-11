@@ -8,13 +8,21 @@
       command: docker pull ghcr.io/tetafro/cv:latest
       changed_when: true
 
+    - name: Check if container is runnig
+      shell: docker ps | grep cv
+      register: container_running
+      changed_when: false
+      ignore_errors: true
+
     - name: Stop current container
       command: docker stop cv
       changed_when: true
+      when: container_running.rc == 0
 
     - name: Remove current container
       command: docker rm cv
       changed_when: true
+      when: container_running.rc == 0
 
     - name: Run latest image
       command: >
