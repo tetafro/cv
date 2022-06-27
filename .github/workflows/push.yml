@@ -17,14 +17,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install linters
-        run: |
-          sudo apt install -y ansible ansible-lint yamllint
+        run: sudo apt install -y ansible ansible-lint yamllint
 
       - name: Run yamllint
-        run: yamllint --format colored --strict ./deploy/*.yml
+        run: yamllint --format colored --strict ./playbook.yml
 
       - name: Run ansible-lint
-        run: ansible-lint ./deploy/*.yml
+        run: ansible-lint ./playbook.yml
 
   build:
     needs: check
@@ -82,4 +81,4 @@ jobs:
           --private-key ~/.ssh/id_ed25519
           --inventory '${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }},'
           --user ${{ secrets.SSH_USER }}
-          deploy/playbook.yml
+          ./playbook.yml

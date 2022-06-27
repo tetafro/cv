@@ -6,14 +6,14 @@ yamllint:
 	@echo '----------------'
 	@echo 'Running yamllint'
 	@echo '----------------'
-	@yamllint --format colored --strict ./deploy/*.yml && echo OK
+	@yamllint --format colored --strict ./playbook.yml && echo OK
 
 .PHONY: ansible-lint
 ansible-lint:
 	@echo '--------------------'
 	@echo 'Running ansible-lint'
 	@echo '--------------------'
-	@ansible-lint ./deploy/*.yml && echo OK
+	@ansible-lint ./playbook.yml && echo OK
 
 .PHONY: build
 build:

@@ -1,0 +1,29 @@
+---
+- name: Setup
+  hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    image: ghcr.io/tetafro/cv
+    tag: latest
+    container: cv
+  tasks:
+    - name: Pull latest image
+      docker_image:
+        name: "{{ image }}:{{ tag }}"
+        source: pull
+
+    - name: Remove current container
+      docker_container:
+        name: "{{ container }}"
+        state: absent
+
+    - name: Run new container
+      docker_container:
+        name: "{{ container }}"
+        image: "{{ image }}:{{ tag }}"
+        state: started
+        restart_policy: unless-stopped
+        networks:
+          - name: internal
+        volumes:
+          - "~/cv/logs:/app/logs"
