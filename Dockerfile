@@ -1,4 +1,4 @@
-FROM ghcr.io/tetafro/caddy:1.0.4
+FROM ghcr.io/tetafro/caddy:v1.0.4
 
 COPY Caddyfile /etc/
 COPY src /app
