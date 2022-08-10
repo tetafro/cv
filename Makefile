@@ -15,6 +15,6 @@ ansible-lint:
 	@echo '--------------------'
 	@ansible-lint ./playbook.yml && echo OK
 
-.PHONY: build
-build:
+.PHONY: docker
+docker:
 	docker build -t ghcr.io/tetafro/cv .
