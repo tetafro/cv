@@ -18,3 +18,11 @@ ansible-lint:
 .PHONY: docker
 docker:
 	docker build -t ghcr.io/tetafro/cv .
+
+.PHONY: deploy
+deploy:
+	@ ansible-playbook \
+	--private-key ~/.ssh/id_ed25519 \
+	--inventory '${SSH_SERVER},' \
+	--user ${SSH_USER} \
+	./playbook.yml
