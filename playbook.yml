@@ -27,4 +27,13 @@
         networks:
           - name: internal
         volumes:
-          - "~/cv/logs:/app/logs"
+          - "/home/{{ ansible_user }}/cv/logs:/app/logs"
+
+    - name: Setup logs rotation
+      become: true
+      template:
+        src: logrotate.conf.j2
+        dest: /etc/logrotate.d/cv.conf
+        owner: root
+        group: root
+        mode: "0644"
