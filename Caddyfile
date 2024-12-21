@@ -3,6 +3,6 @@
     root /app/
     index /index.html
     tls off
-    log / /app/logs/access.log "[{when}] {>X-Forwarded-For} {uri} {status} \"{>Referer}\" \"{>User-Agent}\""
+    log stdout
     errors stdout
 }
