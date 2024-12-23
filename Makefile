@@ -19,6 +19,10 @@ ansible-lint:
 docker:
 	docker build -t ghcr.io/tetafro/cv .
 
+.PHONY: run
+run:
+	docker run --rm -t -p 8080:8080 -v $(PWD)/log:/var/log/caddy ghcr.io/tetafro/cv
+
 .PHONY: deploy
 deploy:
 	@ ansible-playbook \
