@@ -3,6 +3,6 @@
     root /app/
     index /index.html
     tls off
-    log / stdout "{remote} {method} {uri} {status} \"{>Referer}\" \"{>User-Agent}\""
+    log / stdout "{remote} {method} {uri} {status} \"{>Referer}\" \"{>User-Agent}\" {size}"
     errors stdout
 }
