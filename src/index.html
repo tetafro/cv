@@ -1,57 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Denis Krivak, Денис Кривак">
-
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <link href="static/bootstrap.min.css" rel="stylesheet">
-    <link href="static/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="static/favicon.png">
 
     <title>Denis Krivak</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #4a5568;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .right {
+            flex-direction: column;
+            display: flex;
+            padding: 3rem;
+            background: #fff;
+            justify-content: center;
+        }
+
+        .left {
+            display: flex;
+            width: 20rem;
+            background: linear-gradient(135deg, #445566 0%, #223344 100%);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left img {
+            display: block;
+            max-width: 12rem;
+            max-height: 12rem;
+            border: 0.5rem solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .header {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: #667eea;
+        }
+
+        .contact-info {
+            margin-bottom: 4rem;
+            font-size: 1rem;
+        }
+
+        .tagline {
+            margin-bottom: 4rem;
+            font-size: 1.5rem;
+        }
+
+        .skills {
+            flex-wrap: wrap;
+            display: flex;
+            margin-bottom: 4rem;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            white-space: nowrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            text-decoration: none;
+        }
+
+        .social-links img {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            height: 56px;
+            width: 56px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .left {
+                width: 100%;
+                height: 200px;
+                flex-shrink: 0;
+            }
+
+            .left img {
+                max-width: 8rem;
+                max-height: 8rem;
+            }
+
+            .right {
+                width: 100%;
+                padding: 2rem 1.5rem;
+                justify-content: flex-start;
+                flex: 1;
+                box-sizing: border-box;
+            }
+
+
+            .header {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            .tagline {
+                margin-bottom: 2rem;
+                text-align: center;
+                font-size: 1.1rem;
+            }
+
+            .skills {
+                margin-bottom: 2rem;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .social-links {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .skill-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand">
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/me.jpg" alt="me.jpg">
-            </span>
-        </a>
-    </nav>
-
-    <div class="container-fluid p-0">
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center">
-            <div class="w-100">
-                <h1 class="mb-0">Denis
-                    <span class="text-primary">Krivak</span>
-                </h1>
-                <div class="subheading mb-5">
-                    Amsterdam, Netherlands • <a href="mailto:inbox@dkrv.me">inbox@dkrv.me</a>
-                </div>
-                <p class="lead mb-5">Will code for food.</p>
-                <p class="lead mb-5">Go • Python • PostgreSQL • ClickHouse • Elasticsearch • Redis • Kafka • Kubernetes • Terraform • Ansible • Puppet</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/denis-krivak/" target="_blank">
-                        <img src="static/linkedin.webp" alt="linkedin" height="56">
-                    </a>
-                    <a href="https://github.com/tetafro" target="_blank">
-                        <img src="static/github.webp" alt="github" height="56">
-                    </a>
-                    <a href="https://stackoverflow.com/users/5040388/tetafro" target="_blank">
-                        <img src="static/stackoverflow.webp" alt="stackoverflow" height="56">
-                    </a>
-                    <a href="https://www.instagram.com/smart_pony" target="_blank">
-                        <img src="static/instagram.webp" alt="instagram" height="56">
-                    </a>
-                </div>
+    <div class="container">
+        <div class="left">
+            <img src="static/me.jpg" alt="Photo">
+        </div>
+        <div class="right">
+            <div class="header">Denis <span class="highlight">Krivak</span></div>
+            <div class="contact-info">The Hague, Netherlands • <a class="highlight" href="mailto:inbox@dkrv.me">inbox@dkrv.me</a></div>
+            <div class="tagline">Will code for food.</div>
+            <div class="skills">
+                <span class="skill-item">Go</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">PostgreSQL</span>
+                <span class="skill-item">ClickHouse</span>
+                <span class="skill-item">Elasticsearch</span>
+                <span class="skill-item">Redis</span>
+                <span class="skill-item">Kafka</span>
+                <span class="skill-item">Kubernetes</span>
+                <span class="skill-item">Terraform</span>
+                <span class="skill-item">Ansible</span>
+                <span class="skill-item">Puppet</span>
             </div>
-        </section>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/denis-krivak/" target="_blank">
+                    <img src="static/linkedin.webp" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/tetafro" target="_blank">
+                    <img src="static/github.webp" alt="GitHub">
+                </a>
+                <a href="https://stackoverflow.com/users/5040388/tetafro" target="_blank">
+                    <img src="static/stackoverflow.webp" alt="StackOverflow">
+                </a>
+                <a href="https://www.instagram.com/smart_pony" target="_blank">
+                    <img src="static/instagram.webp" alt="Instagram">
+                </a>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
