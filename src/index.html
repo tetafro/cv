@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Denis Krivak, Денис Кривак">
-    <link rel="shortcut icon" href="static/favicon.png">
+    <link rel="shortcut icon" href="static/favicon.svg">
 
     <title>Denis Krivak</title>
 
@@ -90,7 +90,7 @@
             text-decoration: none;
         }
 
-        .social-links img {
+        .social-links svg {
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             border-radius: 50%;
             height: 56px;
@@ -184,19 +184,53 @@
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/denis-krivak/" target="_blank">
-                    <img src="static/linkedin.svg" alt="LinkedIn">
+                    <svg><use href="#linkedin"/></svg>
                 </a>
                 <a href="https://github.com/tetafro" target="_blank">
-                    <img src="static/github.svg" alt="GitHub">
+                    <svg><use href="#github"/></svg>
                 </a>
                 <a href="https://stackoverflow.com/users/5040388/tetafro" target="_blank">
-                    <img src="static/stackoverflow.svg" alt="StackOverflow">
+                    <svg><use href="#stackoverflow"/></svg>
                 </a>
                 <a href="https://www.instagram.com/smart_pony" target="_blank">
-                    <img src="static/instagram.svg" alt="Instagram">
+                    <svg><use href="#instagram"/></svg>
                 </a>
             </div>
         </div>
     </div>
+
+    <svg style="display: none;">
+        <symbol id="linkedin" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="100" style="fill:#495057;fill-opacity:1;stroke-width:2.20175648"/>
+            <path d="M430.1 261.5v159H338V272.3c0-37.3-13.3-62.7-46.7-62.7-25.4 0-40.6 17.1-47.3 33.7a63 63 0 0 0-3 22.5v154.9h-92.3s1.3-251.3 0-277.4H241v39.3l-.6 1h.6v-1c12.2-18.8 34-45.8 83-45.8 60.7 0 106.2 39.7 106.2 124.8zm-378-252C20.7 9.6 0 30.4 0 57.6c0 26.6 20 47.9 51 47.9h.6c32.1 0 52.1-21.3 52.1-48-.6-27.1-20-47.8-51.5-47.8Zm-46.6 411h92.2V143.3H5.5Z" style="fill:#fff;fill-opacity:1" transform="matrix(.2 0 0 .2 60 60)"/>
+        </symbol>
+
+        <symbol id="github" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 200">
+            <g transform="matrix(1.3 0 0 -1.3 0 200)">
+                <circle cx="75" cy="-75" r="75" style="fill:#495057;fill-opacity:1;stroke-width:1.8509475" transform="scale(1 -1)"/>
+                <g style="fill:#fff;fill-opacity:1">
+                    <path d="M0 0a60.4 60.4 0 0 1-19-117.7c3-.5 4 1.3 4 3v11.2c-16.8-3.7-20.4 7-20.4 7-2.7 7-6.7 9-6.7 9-5.5 3.7.4 3.6.4 3.6 6-.4 9.3-6.2 9.3-6.2 5.4-9.3 14.1-6.6 17.5-5 .6 3.8 2.2 6.5 3.9 8-13.4 1.5-27.5 6.7-27.5 29.9 0 6.6 2.3 12 6.2 16.2-.6 1.5-2.7 7.6.6 16 0 0 5 1.6 16.6-6.2a58 58 0 0 0 30.2 0C26.7-23.4 31.7-25 31.7-25c3.3-8.4 1.2-14.5.6-16 3.9-4.3 6.2-9.6 6.2-16.2C38.5-80.4 24.4-85.5 11-87c2.1-1.9 4-5.6 4-11.2v-16.6c0-1.6 1-3.5 4.1-2.9A60.4 60.4 0 0 1 0 0" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(.5 0 0 .5 75 104.3)"/>
+                    <path d="M0 0c-.1-.3-.6-.4-1-.2-.5.2-.7.6-.6 1 .2.2.6.3 1 .1C0 .7.3.3 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 56.4 61.2)"/>
+                    <path d="M0 0c-.3-.3-.9-.1-1.2.3-.4.4-.5 1-.2 1.2.3.3.8.2 1.2-.2C.2.8.3.3 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 57.6 59.8)"/>
+                    <path d="M0 0c-.4-.3-1 0-1.4.5-.3.6-.3 1.2 0 1.5.4.2 1 0 1.4-.5C.4.9.4.3 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 58.8 58.1)"/>
+                    <path d="M0 0c-.3-.4-1-.3-1.6.2-.5.5-.6 1.2-.3 1.6.3.3 1 .2 1.6-.3C.2 1.1.4.4 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 60.4 56.4)"/>
+                    <path d="M0 0c-.1-.5-.8-.7-1.5-.5-.7.2-1.1.8-1 1.3.1.4.8.7 1.5.4C-.3 1 .1.5 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 62.6 55.5)"/>
+                    <path d="M0 0c0-.5-.6-1-1.3-1-.7 0-1.3.5-1.3 1s.6.9 1.3.9C-.6.9 0 .5 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 65 55.3)"/>
+                    <path d="M0 0c0-.5-.4-1-1.1-1.1-.7-.1-1.4.2-1.5.6 0 .5.5 1 1.2 1.2C-.7.7-.1.5 0 0" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.5 0 0 .5 67.4 55.7)"/>
+                </g>
+            </g>
+        </symbol>
+
+        <symbol id="stackoverflow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="100" style="fill:#495057;fill-opacity:1;stroke-width:1.87238443"/>
+            <path d="M158.3 182.2v-53.6h17.8V200H15.6v-71.4h17.8v53.6z" style="fill:#fff;fill-opacity:1;stroke-width:2.3094666" transform="matrix(.4 0 0 .4 60 60)"/>
+            <path d="m53 123.6 87.3 18.2 3.7-17.6L56.7 106zM64.5 82l80.9 37.6 7.4-16.1-80.9-38ZM87 42.3l68.5 57L167 85.7l-68.6-57ZM131.3 0 117 10.6l53 71.6 14.4-10.6ZM51.2 164.2h89.1v-17.8H51.2Z" style="fill:#fff;fill-opacity:1;stroke-width:2.3094666" transform="matrix(.4 0 0 .4 60 60)"/>
+        </symbol>
+
+        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 200">
+            <circle cx="100" cy="100.1" r="99.5" style="fill:#495057;fill-opacity:1;stroke-width:1.96338"/>
+            <path d="M99.8 66.6c10.8 0 12 0 16.4.2 11 .5 16 5.7 16.6 16.6.1 4.3.2 5.6.2 16.4 0 10.8 0 12-.2 16.3-.6 11-5.7 16.2-16.6 16.6-4.3.2-5.6.3-16.4.3-10.8 0-12.1 0-16.4-.3-11-.5-16-5.7-16.6-16.6a280 280 0 0 1-.2-16.3c0-10.8 0-12.1.2-16.4.5-10.9 5.6-16 16.6-16.6 4.3-.2 5.6-.2 16.4-.2zm0-7.3c-11 0-12.4 0-16.7.2-14.7.7-22.9 8.9-23.6 23.6-.2 4.3-.2 5.7-.2 16.7s0 12.4.2 16.7c.7 14.7 8.9 22.9 23.6 23.5 4.3.2 5.7.3 16.7.3s12.4 0 16.7-.3c14.7-.6 22.9-8.8 23.5-23.5.2-4.3.3-5.7.3-16.7s0-12.4-.3-16.7c-.6-14.7-8.8-22.9-23.5-23.6-4.3-.2-5.7-.2-16.7-.2zm0 19.7a20.8 20.8 0 1 0 0 41.6 20.8 20.8 0 0 0 0-41.6zm0 34.3a13.5 13.5 0 1 1 0-27 13.5 13.5 0 0 1 0 27zm21.6-40a4.9 4.9 0 1 0 0 9.7 4.9 4.9 0 0 0 0-9.7z" style="fill:#fff;stroke-width:3.37493"/>
+        </symbol>
+    </svg>
 </body>
 </html>
